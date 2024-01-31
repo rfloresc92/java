@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function suma(a, b) {
+            console.log("la suma es: " + (a + b));
+            return a + b;
+        }
+        const misuma2 = function (a, b) {
+            return a + b;
+        }
+        const misuma3 = (a, b) => {
+            return a + b;
+        }
+
+        const isPositivo = (numero) => {
+            if (numero > 0) {
+                return true;
+            }
+            else if (numero == 0) {
+                return null;
+            }
+            else {
+                return false;
+            }
+        }
+
+        var resultado = suma(3, 3);
+        var resultado2 = misuma2(3, 3);
+        var resultado3 = misuma3(3, 3);
+        console.log("El resultado es: " + resultado);
+
+        var numero = prompt("ingrese un numero: ");
+        var resultadoisPositivo = isPositivo(numero)
+        if (resultadoisPositivo !== null) {
+            if (resultadoisPositivo) {
+                console.log("El numero es: positivo");
+            }
+            else {
+                console.log("El numero es: negativo");
+            }
+        } else {
+            console.log("El numero es: cero");
+        }
+
+        //Sentencias Iterativas
+        //for
+        for (var i = 1; i <= 10; i++) {
+            console.log("Número: " + i);
+            if (i == 5) {
+                break;
+            }
+        }
+
+        for (var i = 10; i <= 10; i++) {
+            console.log("i = " + i);
+            for (var j = 0; j <= i; j++) {
+                console.log("(i, j) = " + "(" + i + ", " + j + ")");
+            }
+        }
+        console.log("****************");
+        for (var i = 10; i >= 0; i--) {
+            console.log("Número ej 2: " + i);
+        }
+
+        //while repite mientras la condicion sea true
+        console.log("****************");
+        var contador = 10;
+        while (contador >= 0) {
+            console.log("Número ej 3: " + contador);
+            contador--;
+        }
+
+        //repeat o do while repite hasta que la condicion sea true
+        console.log("****************");
+        var contador = 10;
+        do {
+            console.log("Número ej 4: " + contador);
+            contador--;
+        } while (contador >= 0);
+
+
+    </script>
 </head>
+
 <body>
     <h1>Este es mi portafolio - Rubén Flores</h1>
 </body>
+
 </html>
